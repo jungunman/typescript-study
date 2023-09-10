@@ -1,19 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const firstName : string = "Jeong";
+const age : number = 30;
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const nameArr : string[] = ["Jeong","Kim","park"];
+const dataObject : {name1 : string, age : number} 
+                 = {name1 : "Jeong",age : 28};
+
+
+console.log(firstName, age, nameArr, dataObject);
+
+/**연습 풀이1 = 나의 소개*/
+const myName : string = "Lucas";
+const myAge : number = 28;
+
+
+console.log(myName,myAge);
+
+
+/**연습 풀이 2 = 내가 좋아하는 곡, 가수 Object 형식으로 담기*/
+const favoriteSingerAndSong : {name : string, age : number, address : string} = {name : "IU", age: 31, address: "unknown" }
+
+console.log(favoriteSingerAndSong);
+
+/**다음과 같이 생긴 자료의 타입지정을 해보도록 합시다.
+
+let project = {
+  member : ['kim', 'park'],
+  days : 30,
+  started : true,
+} */
+
+let project : {member :string[], days : number, started : boolean} = {
+  member : ['kim', 'park'],
+  days : 30,
+  started : true,
+}
+
+console.log(project);
